@@ -17,18 +17,18 @@
 
 **PREREQUISITES:**
 
-Cloud                                    : AWS Cloud
-Server or Vm                             : AWS EC2 instance
-Operating System                         : Ubuntu 20.04 LTS
-Network                                  : AWS VPC
-Security                                 : AWS IAM
-DevOps tools: 
-•	Version Control and Collaboration      : Git and GitHub
-•	CI/CD Pipeline                         : Jenkins
-•	Containerization                       : Docker
-•	Deployment and Container orchestration : Kubernetes
-•	Infrastructure Provisioning            : Terraform 
-•	Configuration Management               : Ansible
+**Cloud  **                                  : AWS Cloud
+**Server or Vm   **                          : AWS EC2 instance
+**Operating System**                         : Ubuntu 20.04 LTS
+**Network   **                               : AWS VPC
+**Security   **                              : AWS IAM
+**DevOps tools: **
+•**	Version Control and Collaboration **     : Git and GitHub
+•**	CI/CD Pipeline    **                     : Jenkins
+•	**Containerization      **                 : Docker
+•	**Deployment and Container orchestration **: Kubernetes
+•	**Infrastructure Provisioning    **        : Terraform 
+•	**Configuration Management  **             : Ansible
 
 **Worker nodes:**
 
@@ -42,7 +42,7 @@ DevOps tools:
 
 ![image](https://github.com/Ravivarman16/DevOps-Capstone-project-2/assets/129171351/8a27288b-daf7-45f8-945c-1bed41ce6adb)
 
-Steps had been uploaded on the DevOps Capstone Project -2 pdf file.
+**Steps had been uploaded on the DevOps Capstone Project -2 pdf file.**
 
  
 
