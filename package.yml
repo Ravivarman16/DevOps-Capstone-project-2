@@ -1,0 +1,38 @@
+---
+#On jenkins master node:
+- name: To install java and jenkins on jenkins master
+  hosts: jenkins-master
+  become: true
+  tasks: 
+    - name: installing the packages on jenkins-master
+      script: jenkins.sh
+
+    - name: updating the task work
+      debug:
+        msg: "packages had been installed successfully on jenkins-master"
+
+#on test-server node:
+- name: To install docker on test-server
+  hosts: test-server
+  become: true
+  tasks: 
+    - name: installing the packages on test-server
+      script: test.sh
+
+    - name: updating the task work
+      debug:
+        msg: "packages had been installed successfully on test-server"
+
+#on prod-server node:
+- name: To install k8s on prod-server
+  hosts: prod-server
+  become: true
+  tasks: 
+    - name: installing the packages on prod-server
+      script: prod.sh
+
+    - name: updating the task work
+      debug:
+        msg: "packages had been installed successfully on prod-server"
+
+#the end:
