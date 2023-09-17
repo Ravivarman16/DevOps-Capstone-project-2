@@ -17,18 +17,18 @@
 
 **PREREQUISITES:**
 
-**Cloud  **                                  : AWS Cloud
-**Server or Vm   **                          : AWS EC2 instance
+**Cloud**                                    : AWS Cloud
+**Server or Vm**                             : AWS EC2 instance
 **Operating System**                         : Ubuntu 20.04 LTS
-**Network   **                               : AWS VPC
-**Security   **                              : AWS IAM
+**Network**                                  : AWS VPC
+**Security**                                 : AWS IAM
 **DevOps tools: **
-•**	Version Control and Collaboration **     : Git and GitHub
-•**	CI/CD Pipeline    **                     : Jenkins
-•	**Containerization      **                 : Docker
-•	**Deployment and Container orchestration **: Kubernetes
-•	**Infrastructure Provisioning    **        : Terraform 
-•	**Configuration Management  **             : Ansible
+**Version Control and Collaboration**        : Git and GitHub
+**CI/CD Pipeline**                           : Jenkins
+**Containerization**                         : Docker
+**Deployment and Container orchestration**   : Kubernetes
+**Infrastructure Provisioning**              : Terraform 
+**Configuration Management**                 : Ansible
 
 **Worker nodes:**
 
