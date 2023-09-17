@@ -1,31 +1,37 @@
-pipeline {
-    agent { label 'test_node' }
-
-    stages {
-        stage('Git cloning') {
-            steps {
-                git branch: 'main',
-                url: 'https://github.com/Ravivarman16/DevOps-Capstone-project-2.git'
-            }
-        }
-
-        stage ('Building a dockerimage') {
-            steps {
-                sh 'docker rm -f $(docker ps -aq)'
-                sh 'docker build -t ravivarman46/testimage .'
-                sh 'docker run -d --name container1 -p 8080:80 ravivarman46/testimage'
-                sh 'docker push ravivarman46/testimage'
-            }
-        }
-    }
-
-    agent { label 'prod'}
-
-    stages {
-        stage ('production by k8s') {
-            steps {
-                sh 'kubectl apply -f production.yml'
-            }
-        }
-    }
-}
+# Creating a Deployment with the type RollingUpdate
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp-pod
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: live-app
+  template:
+    metadata:
+      labels:
+        app: live-app
+    spec:
+      containers:
+        - name: production-container
+          image: ravivarman46/testimage
+          ports:
+            - containerPort: 80
+---
+# Creating a Service for the pod
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc
+spec:
+  type: NodePort
+  selector:
+    app: live-app
+  ports:
+    - port: 8080
+      targetPort: 80
+      nodePort: 30008
