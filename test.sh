@@ -3,6 +3,9 @@
 #updating the os:
 apt-get update
 
+#to install java:
+apt-get install -y openjdk-11-jre
+
 #installing docker:
 apt-get install -y docker.io
 
